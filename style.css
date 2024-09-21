@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* Add smooth scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    height: 13vh;
+    background-color: #007bff;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+
+nav > a {
+    display: inline-block;
+    font-size: 3.5rem;
+    color: white;
+    position: relative;
+}
+
+nav > a::before,
+nav > a::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: .3rem;
+    transition: all .3s ease;
+}
+
+nav > a::before {
+    left: 0;
+    bottom: 0;
+    width: 0;
+}
+
+nav > a::after {
+    right: 0;
+    top: 0;
+    width: 0;
+}
+
+nav > a:hover::before,
+nav > a:hover::after {
+    width: 100%;
+}
+
+nav ol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    font-size: 1.6rem;
+    position: relative;
+    color: white;
+    letter-spacing: 1px;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.2rem;
+    width: 0;
+    background-color: white;
+    height: .2rem;
+    transition: all .3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a:hover {
+    color: wheat;
+}
+
+/* Main Section */
+main {
+    width: 100%;
+    height: calc(100vh - 13vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Add this for better alignment */
+}
+
+h1 {
+    font-size: 3.3rem;
+    color: gray;
+    padding-bottom: 5rem;
+}
+
+.input {
+    width: clamp(30rem, 50rem, 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.input-group {
+    position: relative;
+    height: 4rem;
+    flex: 1 0 30rem;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    padding: 0 3rem 0 1.5rem;
+    border: none;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #007bff;
+}
+
+label {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transition: all .3s ease;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+input:focus + label,
+input:valid + label {
+    top: -.5rem;
+    left: 1rem;
+    font-size: 1.3rem;
+}
+
+.button {
+    flex: 1 0 10rem;
+    height: 4rem;
+    transition: all .3s ease;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color .3s, color .3s; /* Add transition for hover */
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+h2 {
+    padding-top: 3rem;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 2rem;
+    }
+    
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    input, button {
+        font-size: 1.4rem;
+    }
+}
