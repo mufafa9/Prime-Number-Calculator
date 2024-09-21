@@ -203,5 +203,7 @@ input:valid + label {
 
     #result {
         font-size: 1.8rem; /* Slightly smaller on mobile */
+
     }
+    
 }
